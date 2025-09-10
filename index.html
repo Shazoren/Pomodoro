@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Vue.js</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Pomodoro Timer</h1>
+    <div>
+      <button class="focus" @click="setMode('focus')">Focus</button>
+      <button class="short" @click="setMode('short')">Pause courte</button>
+      <button class="long" @click="setMode('long')">Pause longue</button>
+    </div>
+    <div class="timer">{{ minutes }}:{{ seconds }}</div>
+    <div>
+      <button class="control" @click="toggleTimer">{{ running ? 'Pause' : 'Start' }}</button>
+      <button class="control" @click="resetTimer">Reset</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
